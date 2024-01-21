@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@pinia/nuxt',
     '@vite-pwa/nuxt',
+    '@nuxtjs/google-fonts',
     'nuxt-bootstrap-icons',
     '@nuxtjs/i18n',
     'nuxt-vitest',
@@ -16,11 +17,22 @@ export default defineNuxtConfig({
     glsl: true,
   },
   tailwindcss: {
+    cssPath: '~/assets/css/tailwind.css',
     configPath: '~/config/tailwind.config.js',
     viewer: true,
   },
   pinia: {
     storesDirs: ['./stores/**'],
+  },
+  googleFonts: {
+    download: true,
+    base64: true,
+    inject: true,
+    families: {
+      Play: true,
+      Poppins: true,
+    },
+    display: 'swap',
   },
   i18n: {
     baseUrl: 'https://anuness.dev',
