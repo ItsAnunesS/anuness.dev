@@ -1,5 +1,9 @@
 <script setup lang="ts">
+import useLoading from "~/composables/useLoading";
+
 const pages = usePages();
+const localePath = useLocalePath();
+const loading = useLoading();
 </script>
 
 <template>
@@ -8,7 +12,14 @@ const pages = usePages();
     <div class="drawer-content flex flex-col">
       <TopNotification :rounded="false"/>
       <TheMenu />
-      <slot />
+      <main>
+        <template v-if="!loading">
+          <slot />
+        </template>
+        <template v-else>
+          <TheLoading />
+        </template>
+      </main>
       <TheFooter />
       <TheModals />
     </div>
@@ -17,7 +28,7 @@ const pages = usePages();
       <ul class="menu p-4 w-1/3 min-h-full bg-base-200">
         <template v-for="page in pages" :key="page.path">
           <li v-if="!page.hide">
-            <a>
+            <a :href="localePath(page.path)">
               <template v-if="page.html">
                 <span v-html="page.html" />
               </template>
