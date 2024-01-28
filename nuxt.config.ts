@@ -38,7 +38,7 @@ export default defineNuxtConfig({
     baseUrl: 'https://anuness.dev',
     vueI18n: './config/i18n.config.ts',
     langDir: './locales',
-    strategy: 'prefix_except_default',
+    strategy: 'no_prefix',
     defaultLocale: 'us',
     lazy: true,
     locales: [
