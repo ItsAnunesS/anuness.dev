@@ -22,6 +22,7 @@ const loading = useLoading();
       </main>
       <TheFooter />
       <TheModals />
+      <WhatsappFloat />
     </div>
     <div class="drawer-side">
       <label for="my-app" aria-label="close sidebar" class="drawer-overlay"></label>
