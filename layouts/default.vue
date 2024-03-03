@@ -21,9 +21,6 @@ const notifications = useNotifications();
       <main>
         <template v-if="!loading">
           <slot />
-          <a @click="notifications.push({rounded: false, text: 'Loading...', type: 'info' })">
-            Show loading notification
-          </a>
         </template>
         <template v-else>
           <TheLoading />

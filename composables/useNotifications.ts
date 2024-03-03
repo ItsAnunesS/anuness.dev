@@ -4,6 +4,7 @@ export default function () {
             'text': 'this website is under construction',
             'rounded': false,
             'type': 'warning',
+            'timeout': 5000,
         }
     ]);
 }

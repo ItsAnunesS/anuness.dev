@@ -7,7 +7,8 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@nuxtjs/i18n": "next",
@@ -16,6 +17,7 @@
     "@vite-pwa/nuxt": "^0.4.0",
     "daisyui": "^4.7.2",
     "happy-dom": "^13.6.2",
+    "husky": "^8.0.0",
     "nuxt": "^3.10.3",
     "nuxt-bootstrap-icons": "^1.1.7",
     "nuxt-vitest": "^0.11.5",
