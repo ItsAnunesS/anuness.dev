@@ -1,20 +1,29 @@
 <script setup lang="ts">
 import useLoading from "~/composables/useLoading";
+import useNotifications from "~/composables/useNotifications";
 
 const pages = usePages();
 const localePath = useLocalePath();
 const loading = useLoading();
+const notifications = useNotifications();
 </script>
 
 <template>
+  <ul v-auto-animate>
+    <li v-for="notification in notifications">
+      <TopNotification :text="notification.text" :rounded="notification.rounded" :type="notification.type"/>
+    </li>
+  </ul>
+  <TheMenu />
   <div class="drawer">
     <input id="my-app" type="checkbox" class="drawer-toggle" />
     <div class="drawer-content flex flex-col">
-      <TopNotification :rounded="false"/>
-      <TheMenu />
       <main>
         <template v-if="!loading">
           <slot />
+          <a @click="notifications.push({rounded: false, text: 'Loading...', type: 'info' })">
+            Show loading notification
+          </a>
         </template>
         <template v-else>
           <TheLoading />
@@ -26,7 +35,10 @@ const loading = useLoading();
     </div>
     <div class="drawer-side">
       <label for="my-app" aria-label="close sidebar" class="drawer-overlay"></label>
-      <ul class="menu p-4 w-1/3 min-h-full bg-base-200">
+      <ul class="menu p-4 w-80 min-h-full bg-base-200 text-base-content">
+        <h2>
+          André
+        </h2>
         <template v-for="page in pages" :key="page.path">
           <li v-if="!page.hide">
             <a :href="localePath(page.path)">

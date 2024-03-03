@@ -9,6 +9,7 @@ export default defineNuxtConfig({
     '@vite-pwa/nuxt',
     '@nuxtjs/google-fonts',
     'nuxt-bootstrap-icons',
+    '@formkit/auto-animate/nuxt',
     '@nuxtjs/i18n',
     'nuxt-vitest',
   ],
