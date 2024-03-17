@@ -67,8 +67,8 @@ useHeadSafe({
     </div>
     <div class="navbar-center">
       <div class="avatar">
-        <div class="w-12 h-12 rounded-full">
-          <IconsLogoDark />
+        <div class="w-12 h-12 rounded-full ring ring-base-content">
+          <img src="/img/5fb69c6ebf05b7c995ef2ccaedd6e2f7.jpg" class="object-cover">
         </div>
       </div>
     </div>
