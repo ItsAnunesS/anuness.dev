@@ -7,55 +7,48 @@ const localePath = useLocalePath();
 const loading = useLoading();
 const notifications = useNotifications();
 
+
 useHeadSafe({
       link: [
         {
           rel: "apple-touch-icon",
           sizes: "180x180",
-          href: "/apple-touch-icon.png"
+          href: "/apple-touch-icon.png?v=323223",
         },
         {
           rel: "icon",
           type: "image/png",
           sizes: "32x32",
-          href: "/favicon-32x32.png"
-        },
-        {
-          rel: "icon",
-          type: "image/png",
-          sizes: "194x194",
-          href: "/favicon-194x194.png"
-        },
-        {
-          rel: "icon",
-          type: "image/png",
-          sizes: "192x192",
-          href: "/android-chrome-192x192.png"
+          href: "/favicon-32x32.png?v=323223",
         },
         {
           rel: "icon",
           type: "image/png",
           sizes: "16x16",
-          href: "/favicon-16x16.png"
+          href: "/favicon-16x16.png?v=323223",
         },
         {
           rel: "manifest",
-          href: "/site.webmanifest"
+          href: "/site.webmanifest?v=323223",
         },
         {
           rel: "mask-icon",
-          href: "/safari-pinned-tab.svg",
-          color: "#e31c1c"
-        }
+          href: "/safari-pinned-tab.svg?v=323223",
+          color: "#e31c1c",
+        },
+        {
+          rel: "shortcut icon",
+          href: "/favicon.ico?v=323223",
+        },
       ],
       meta: [
         {
           name: "apple-mobile-web-app-title",
-          content: "DynatriSoft Games"
+          content: "André Nunes",
         },
         {
           name: "application-name",
-          content: "DynatriSoft Games"
+          content: "André Nunes",
         },
         {
           name: "msapplication-TileColor",
@@ -63,12 +56,12 @@ useHeadSafe({
         },
         {
           name: "msapplication-TileImage",
-          content: "/mstile-144x144.png"
+          content: "/mstile-144x144.png?v=323223",
         },
         {
           name: "theme-color",
-          content: "#ffffff"
-        }
+          content: "#ffffff",
+        },
       ]
   })
 </script>
@@ -101,11 +94,11 @@ useHeadSafe({
         <div class="mx-auto py-4">
           <div class="avatar online">
             <div class="w-16 h-16 rounded-full ring ring-accent ring-offset-base-100 ring-offset-2">
-              <img src="/imgs/profile.jpeg" alt="avatar" class="rounded-full" />
+              <img src="/img/profile.jpeg" alt="avatar" class="rounded-full" />
             </div>
           </div>
         </div>
-        <h2 class="text-xl text-center text-md font-bold pb-2">
+        <h2 class="text-lg text-center text-md font-bold pb-2">
           André Nunes
         </h2>
         <template v-for="page in pages" :key="page.path">
