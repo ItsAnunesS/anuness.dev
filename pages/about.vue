@@ -1,17 +1,10 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-const items = ref(["😏","😐","😑","😒","😕"])
-const emoji = ref("");
-function removeItem(toRemove: string) {
-  items.value = items.value.filter((item) => item !== toRemove)
-}
-function addEmoji() {
-  items.value.push(emoji.value)
-  emoji.value = ""
-}
+const { data } = await useFetch('/api/test')
 </script>
 
 <template>
+  <h1>o</h1>
+  <pre>{{ data }}</pre>
 </template>
 
 <style scoped>
