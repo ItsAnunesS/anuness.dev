@@ -69,7 +69,7 @@ useHeadSafe({
 <template>
   <ul v-auto-animate>
     <li v-for="notification in notifications">
-      <TopNotification :text="notification.text" :rounded="notification.rounded" :type="notification.type"/>
+      <TopNotification :notification="notification" />
     </li>
   </ul>
   <TheMenu />

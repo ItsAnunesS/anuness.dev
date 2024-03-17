@@ -1,10 +1,19 @@
+export interface INotification {
+    id: number
+    text: string
+    type: 'success' | 'error' | 'warning' | 'info'
+    rounded?: boolean
+    timeout?: number
+    closeable?: boolean
+}
+
 export default function () {
-    return useState('notifications', () => [
+    return useState('notifications', (): INotification[] => [
         {
-            'text': 'this website is under construction',
-            'rounded': false,
-            'type': 'warning',
-            'timeout': 5000,
+            id: 1,
+            text: 'this website is under construction',
+            type: 'warning',
+            closeable: true
         }
     ]);
 }

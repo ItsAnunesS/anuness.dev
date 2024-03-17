@@ -1,11 +1,11 @@
 <script setup lang="ts">
+import useNotifications, {type INotification} from "~/composables/useNotifications";
+
 const props = defineProps<{
-  text: string;
-  rounded?: boolean;
-  type?: string;
+  notification: INotification;
 }>();
 
-const { text, rounded = true, type = 'warning' } = props;
+const { id, text, type, rounded = false, timeout = undefined, closeable = false } = props.notification;
 const classes = computed(() => [
   'alert',
   {
@@ -16,6 +16,22 @@ const classes = computed(() => [
     'alert-info': type === 'info',
   },
 ]);
+
+const notifications = useNotifications();
+const removeNotification = (id: number) => {
+  const index = notifications.value.findIndex((notification: INotification) => notification.id === id);
+  if (index !== -1) {
+    notifications.value.splice(index, 1);
+  }
+}
+
+onMounted(() => {
+  if (timeout) {
+    setTimeout(() => {
+      removeNotification(id);
+    }, timeout);
+  }
+});
 </script>
 
 <template>
@@ -26,6 +42,11 @@ const classes = computed(() => [
         <span>
           {{ text }}
         </span>
+        <template v-if="closeable">
+          <button class="btn btn-sm" @click="removeNotification(id)">
+            Close
+          </button>
+        </template>
       </div>
     </li>
   </ul>
