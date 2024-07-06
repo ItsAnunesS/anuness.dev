@@ -11,7 +11,7 @@
     "prepare": "husky install"
   },
   "devDependencies": {
-    "@nuxt/scripts": "^0.6.1",
+    "@nuxt/scripts": "^0.6.2",
     "@nuxtjs/i18n": "next",
     "@nuxtjs/tailwindcss": "latest",
     "@nuxtjs/web-vitals": "^0.2.7",

@@ -7,7 +7,6 @@ const localePath = useLocalePath();
 const loading = useLoading();
 const notifications = useNotifications();
 
-
 useHeadSafe({
       link: [
         {
@@ -86,7 +85,6 @@ useHeadSafe({
       </main>
       <TheFooter />
       <TheModals />
-      <WhatsappFloat />
     </div>
     <div class="drawer-side z-[99]">
       <label for="my-app" aria-label="close sidebar" class="drawer-overlay"></label>
