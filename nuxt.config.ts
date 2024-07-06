@@ -1,6 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
+
   modules: [
     '@tresjs/nuxt',
     '@vant/nuxt',
@@ -12,19 +13,27 @@ export default defineNuxtConfig({
     '@formkit/auto-animate/nuxt',
     '@nuxtjs/i18n',
     'nuxt-vitest',
+    '@nuxtjs/web-vitals',
+    '@logto/nuxt',
+    '@nuxt/scripts',
+    '@productdevbook/chatwoot',
   ],
+
   tres: {
     devtools: true,
     glsl: true,
   },
+
   tailwindcss: {
     cssPath: '~/assets/css/tailwind.css',
     configPath: '~/config/tailwind.config.js',
     viewer: true,
   },
+
   pinia: {
     storesDirs: ['./stores/**'],
   },
+
   googleFonts: {
     download: true,
     base64: true,
@@ -35,6 +44,13 @@ export default defineNuxtConfig({
     },
     display: 'swap',
   },
+
+  webVitals: {
+    provider: 'log',
+    debug: false,
+    disabled: false
+  },
+
   i18n: {
     baseUrl: 'https://anuness.dev',
     vueI18n: './config/i18n.config.ts',
@@ -64,5 +80,20 @@ export default defineNuxtConfig({
       cookieKey: 'i18n_anuness_redirected',
       redirectOn: 'root',
     }
-  }
+  },
+
+  chatwoot: {
+    init: {
+      websiteToken: 'S6LfFeuotuYKkojNhNV4xVux',
+      baseUrl: 'https://helpdesk.anuness.dev',
+    },
+    settings: {
+      locale: 'en',
+      position: 'right',
+      launcherTitle: 'Hello Chat',
+    },
+    partytown: false,
+  },
+
+  compatibilityDate: '2024-07-06'
 })
