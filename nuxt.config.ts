@@ -15,7 +15,6 @@ export default defineNuxtConfig({
     'nuxt-vitest',
     '@nuxtjs/web-vitals',
     '@logto/nuxt',
-    '@nuxt/scripts',
     '@productdevbook/chatwoot',
   ],
 
