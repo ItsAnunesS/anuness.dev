@@ -14,8 +14,8 @@ export default defineNuxtConfig({
     '@nuxtjs/i18n',
     'nuxt-vitest',
     '@nuxtjs/web-vitals',
-    '@logto/nuxt',
     '@productdevbook/chatwoot',
+    'nuxt-appwrite',
   ],
 
   tres: {
@@ -31,6 +31,11 @@ export default defineNuxtConfig({
 
   pinia: {
     storesDirs: ['./stores/**'],
+  },
+
+  appwrite: {
+    endpoint: 'https://appwrite.anuness.dev/v1',
+    project: 'dev',
   },
 
   googleFonts: {
