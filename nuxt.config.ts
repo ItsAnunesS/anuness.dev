@@ -2,6 +2,10 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
 
+  nitro: {
+    static: true
+  },
+  
   modules: [
     '@tresjs/nuxt',
     '@vant/nuxt',
