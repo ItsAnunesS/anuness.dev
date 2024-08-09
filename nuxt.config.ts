@@ -7,25 +7,15 @@ export default defineNuxtConfig({
   },
   
   modules: [
-    '@tresjs/nuxt',
     '@vant/nuxt',
     '@nuxtjs/tailwindcss',
     '@pinia/nuxt',
-    '@vite-pwa/nuxt',
     '@nuxtjs/google-fonts',
     'nuxt-bootstrap-icons',
     '@formkit/auto-animate/nuxt',
     '@nuxtjs/i18n',
     'nuxt-vitest',
-    '@nuxtjs/web-vitals',
-    '@productdevbook/chatwoot',
-    'nuxt-appwrite',
   ],
-
-  tres: {
-    devtools: true,
-    glsl: true,
-  },
 
   tailwindcss: {
     cssPath: '~/assets/css/tailwind.css',
@@ -37,11 +27,6 @@ export default defineNuxtConfig({
     storesDirs: ['./stores/**'],
   },
 
-  appwrite: {
-    endpoint: 'https://appwrite.anuness.dev/v1',
-    project: 'dev',
-  },
-
   googleFonts: {
     download: true,
     base64: true,
@@ -51,12 +36,6 @@ export default defineNuxtConfig({
       Poppins: true,
     },
     display: 'swap',
-  },
-
-  webVitals: {
-    provider: 'log',
-    debug: false,
-    disabled: false
   },
 
   i18n: {
@@ -88,18 +67,6 @@ export default defineNuxtConfig({
       cookieKey: 'i18n_anuness_redirected',
       redirectOn: 'root',
     }
-  },
-
-  chatwoot: {
-    init: {
-      websiteToken: 'S6LfFeuotuYKkojNhNV4xVux',
-      baseUrl: 'https://helpdesk.anuness.dev',
-    },
-    settings: {
-      locale: 'en',
-      position: 'right',
-    },
-    partytown: false,
   },
 
   compatibilityDate: '2024-07-06'

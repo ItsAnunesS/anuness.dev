@@ -1,11 +1,10 @@
 <script setup lang="ts">
 import useLoading from "~/composables/useLoading";
-import useNotifications from "~/composables/useNotifications";
 
 const pages = usePages();
 const localePath = useLocalePath();
 const loading = useLoading();
-const notifications = useNotifications();
+const images = usePublicImages();
 
 useHeadSafe({
       link: [
@@ -66,11 +65,7 @@ useHeadSafe({
 </script>
 
 <template>
-  <ul v-auto-animate>
-    <li v-for="notification in notifications">
-      <TopNotification :notification="notification" />
-    </li>
-  </ul>
+  <TopNotification />
   <TheMenu />
   <div class="drawer">
     <input id="my-app" type="checkbox" class="drawer-toggle" />
@@ -92,7 +87,7 @@ useHeadSafe({
         <div class="mx-auto py-4">
           <div class="avatar online">
             <div class="w-16 h-16 rounded-full ring ring-accent ring-offset-base-100 ring-offset-2">
-              <img src="/img/profile.jpeg" alt="avatar" class="rounded-full" />
+              <img :src="images.logo" alt="avatar" class="rounded-full" />
             </div>
           </div>
         </div>

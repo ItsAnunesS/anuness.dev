@@ -22,7 +22,6 @@ const handleScroll = () => {
   lastScrollTop = scrollTop;
 };
 
-
 const cookie = useCookie('theme');
 
 const changeTheme = () => {
@@ -51,6 +50,8 @@ const changeTheme = () => {
   cookie.value = cookie.value === theme ? 'acid' : theme;
 };
 
+const images = usePublicImages();
+
 useHeadSafe({
   htmlAttrs: {
     'data-theme': cookie
@@ -68,7 +69,7 @@ useHeadSafe({
     <div class="navbar-center">
       <div class="avatar">
         <div class="w-12 h-12 rounded-full ring ring-base-content">
-          <img src="/img/5fb69c6ebf05b7c995ef2ccaedd6e2f7.jpg" class="object-cover">
+          <img :src="images.logo" class="object-cover" alt="logo">
         </div>
       </div>
     </div>
