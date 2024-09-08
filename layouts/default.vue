@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { createHash } from 'crypto';
 import useLoading from "~/composables/useLoading";
 
 const pages = usePages();
