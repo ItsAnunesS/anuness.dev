@@ -30,7 +30,7 @@ const projects = useProjects();
 							<p>A short summary of the article goes here...</p>
 							<div class="card-actions mt-4">
 								<a
-									href="/articles"
+									href="/"
 									class="btn btn-primary"
 								>Read More</a>
 							</div>
