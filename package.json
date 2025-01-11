@@ -7,27 +7,11 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@formkit/auto-animate": "^0.8.2",
-    "@nuxt/content": "2.13.4",
-    "@nuxt/eslint": "0.7.2",
-    "@nuxtjs/i18n": "9.1.1",
-    "@nuxtjs/tailwindcss": "6.12.2",
-    "@tresjs/nuxt": "3.0.7",
-    "eslint": "^8.57.0 || ^9.0.0",
-    "md5": "^2.3.0",
-    "nuxt": "^3.14.1592",
-    "three": ">=0.133",
+    "nuxt": "^3.15.1",
     "vue": "latest",
     "vue-router": "latest"
-  },
-  "devDependencies": {
-    "@types/md5": "^2.3.5",
-    "daisyui": "^4.12.14",
-    "typescript": "^5.7.2"
   }
 }

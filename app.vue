@@ -1,13 +1,6 @@
-<script setup lang="ts">
-
-</script>
-
 <template>
-	<NuxtLayout>
-		<LazyNuxtPage />
-	</NuxtLayout>
+  <div>
+    <NuxtRouteAnnouncer />
+    <NuxtWelcome />
+  </div>
 </template>
-
-<style scoped>
-
-</style>
