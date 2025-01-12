@@ -4,7 +4,6 @@ import { useUserStore } from "~/stores/user";
 import type {AvailableLanguages} from "~/types/InterfaceLanguage";
 
 const { locale, locales, setLocale } = useI18n();
-
 const languages = useLanguageStore();
 const user = useUserStore();
 

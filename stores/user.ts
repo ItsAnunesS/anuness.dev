@@ -6,5 +6,9 @@ export const useUserStore = defineStore('user', () => {
 	const theme = ref<string>('dark');
 	const language = ref<ILanguage|null>({});
 	
-	return { name, language, theme }
+	const updateLanguage = (newLanguage: ILanguage) => {
+		language.value = newLanguage;
+	};
+	
+	return { name, language, theme, updateLanguage }
 })
