@@ -11,4 +11,6 @@ export const useUserStore = defineStore('user', () => {
 	};
 	
 	return { name, language, theme, updateLanguage }
+}, {
+	persist: true,
 })

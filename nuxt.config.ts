@@ -2,7 +2,13 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
-  modules: ['@nuxtjs/supabase', '@nuxtjs/tailwindcss', '@nuxtjs/i18n', '@pinia/nuxt'],
+  modules: [
+    '@nuxtjs/supabase',
+    '@nuxtjs/tailwindcss',
+    '@pinia/nuxt',
+    'pinia-plugin-persistedstate/nuxt',
+    '@nuxtjs/i18n',
+  ],
   supabase: {
     redirect: false,
   },
