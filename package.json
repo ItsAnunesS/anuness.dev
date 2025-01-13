@@ -10,6 +10,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@nuxtjs/device": "3.2.4",
     "@nuxtjs/i18n": "9.1.1",
     "@nuxtjs/supabase": "1.4.5",
     "@nuxtjs/tailwindcss": "6.12.2",
