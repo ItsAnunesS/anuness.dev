@@ -18,7 +18,7 @@ const head = useLocaleHead();
 		<Body>
 			<div class="drawer">
 				<input id="anuness-drawer" type="checkbox" class="drawer-toggle" />
-				<div class="drawer-content flex flex-col">
+				<div class="drawer-content flex flex-col min-w-full min-h-full">
 					<CoreMenu />
 					<slot />
 					<CoreFooter />
